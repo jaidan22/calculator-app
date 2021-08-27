@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id='style' href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calc">
+        <header>
+            <h1 id="title">calculator</h1>
+            <div class="theme">
+                <img id="toggle_d" src="darkmode.png" alt="toggle to dark mode">
+                <img id="toggle_l" src="lightmode.png" alt="toggle to light mode">
+            </div>
+        </header>
+        <div class="display">
+            <input type='text' class="type"><br>
+            <h1 class="answer"></h1>
+        </div>
+        <div class="keypad">
+            <table id="keys" cellspacing='10px'>
+                <tr class="key_row">
+                    <td class="btn del">AC</td>
+                    <td class="btn func">x</td>
+                    <td class="btn func">÷</td>
+                    <td class="btn del"><img src="backspace_black.png" id="dlt-black" alt="delete"><img src="backspace_white.png" alt="delete" id="dlt-white"></td>
+                </tr>
+                <tr class="key_row">
+                    <td class="btn num">7</td>
+                    <td class="btn num">8</td>
+                    <td class="btn num">9</td>
+                    <td class="btn func">-</td>
+                </tr>
+                <tr class="key_row">
+                    <td class="btn num">4</td>
+                    <td class="btn num">5</td>
+                    <td class="btn num">6</td>
+                    <td class="btn func">+</td>
+                </tr>
+                <tr class="key_row">
+                    <td class="btn num">1</td>
+                    <td class="btn num">2</td>
+                    <td class="btn num">3</td>
+                    <td class="btn equal" rowspan="2">=</td>
+                </tr>
+                <tr class="key_row">
+                    <td class="btn num">00</td>
+                    <td class="btn num">0</td>
+                    <td class="btn num">.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
