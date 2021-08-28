@@ -1,6 +1,6 @@
 # Calculator App
-#### A simple <a href="https://jaidan22.github.io/calculator-app/">calculator</a> that performs basic math operations 
-#### Using HTML, CSS and JavaScript (without framework)
+A simple <a href="https://jaidan22.github.io/calculator-app/">calculator</a> that performs basic math operations 
+Using HTML, CSS and JavaScript (without framework)
 
 
 <div align="center">
