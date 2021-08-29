@@ -54,7 +54,8 @@ img:hover {
   border-radius: 20px;
   box-sizing: border-box;
 }
-.type {
+.type,
+.answer {
   top: 0px;
   width: 100%;
   height: 40%;
@@ -68,7 +69,7 @@ img:hover {
   text-align: inherit;
 }
 .answer {
-  display: none;
+  height: 60%;
   font-size: 30px;
   font-weight: bold;
 }

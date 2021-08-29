@@ -36,25 +36,39 @@ keys.addEventListener('click', (e) => {
         if (/^\D|\D$|\D\D/.test(display.value)) {
             display.value = 'Invalid format';
         } else {
-            let nos = display.value.match(/\d+/g);
-            let ans = Number(nos[0]);   // gives an array of numbers
+            let nos = display.value.match(/\d+/g);  // gives an array of numbers
             let ops = display.value.match(/\D/g);  // gives an array of operators
+            let ans;   
+            for (let i = 0; i < ops.length; i++){
+                if (ops[i] == 'x' || '÷' || '*' || '/') 
+                    switch (ops[i]) {
+                        case 'x':
+                        case '*':
+                            nos[i] = Number(nos[i]) * Number(nos[i + 1]);
+                            nos.splice(i + 1, 1);
+                            ops.splice(i, 1);
+                            i--;
+                            break;
+                        case '÷':
+                        case '/':
+                            nos[i] = Number(nos[i]) / Number(nos[i + 1]);
+                            nos.splice(i + 1, 1);
+                            ops.splice(i, 1);
+                            i--;
+                            break;
+                    }
+                }
+            ans = Number(nos[0]);
             for (let i = 0; i < ops.length; i++)
                 switch (ops[i]) {
                     case '+':
-                        ans += Number(nos[i+1]);
-                        break;
+                         ans += Number(nos[i+1]);
+                         break;
                     case '-':
-                        ans -= Number(nos[i+1]);
-                        break;
-                    case 'x':
-                        ans *= Number(nos[i+1]);
-                        break;
-                    case '÷':
-                        ans /= Number(nos[i+1]);
-                        break;
-                }
-            display_ans.innerText = ans;
+                         ans -= Number(nos[i+1]);
+                         break;
+                    }
+            display_ans.value = ans;
             display_ans.style.display = 'block';
         }
     }
