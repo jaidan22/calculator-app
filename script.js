@@ -11,14 +11,16 @@ toggleL.addEventListener('click', (e) => {
 });
 
 let display = document.querySelector('.type');
+display.focus();
 let display_ans = document.querySelector('.answer');
 display.value = '';
 let keys = document.querySelector('#keys');
 keys.addEventListener('click', (e) => {
 
     // DISPLAYING INPUT
-    if (e.target.classList.contains('num')||e.target.classList.contains('func')) {
-            display.value += e.target.innerText;
+    if (e.target.classList.contains('num') || e.target.classList.contains('func')) {
+        display_ans.style.display = 'none';
+        display.value += e.target.innerText;
     }
 
     // DELETE and ALL CLEAR BUTTON
@@ -33,12 +35,14 @@ keys.addEventListener('click', (e) => {
 
     // OPERATIONS
     if (e.target.classList.contains('equal')) {
+
+        // INVALID FORMAT 
         if (/^\D|\D$|\D\D/.test(display.value)) {
             display.value = 'Invalid format';
         } else {
-            let nos = display.value.match(/\d+/g);  // gives an array of numbers
-            let ops = display.value.match(/\D/g);  // gives an array of operators
-            let ans;   
+            let nos = display.value.match(/\d+([.]\d+)?/g);  // gives an array of numbers
+            let ops = display.value.match(/[+/x*-]|[÷]/g);  // gives an array of operators
+            let ans;
             for (let i = 0; i < ops.length; i++){
                 if (ops[i] == 'x' || '÷' || '*' || '/') 
                     switch (ops[i]) {

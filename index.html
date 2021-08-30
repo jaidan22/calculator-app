@@ -10,6 +10,8 @@
 </head>
 <body>
     <div id="calc">
+
+        <!-- HEADING -->
         <header>
             <h1 id="title">calculator</h1>
             <div class="theme">
@@ -17,42 +19,46 @@
                 <img id="toggle_l" src="images/lightmode.png" alt="toggle to light mode">
             </div>
         </header>
+
+        <!-- DISPLAY  -->
         <div class="display">
             <input type='text' class="type"><br>
-            <input type='text' class="answer">
+            <input type='text' class="answer" readonly>
         </div>
+
+        <!-- KEYPAD  -->
         <div class="keypad">
-            <table id="keys" cellspacing='10px'>
-                <tr class="key_row">
-                    <td class="btn del">AC</td>
-                    <td class="btn func">x</td>
-                    <td class="btn func">÷</td>
-                    <td class="btn del"><img class="del" src="images/backspace_black.png" id="dlt-black" alt="delete"><img class="del" src="images/backspace_white.png" alt="delete" id="dlt-white"></td>
-                </tr>
-                <tr class="key_row">
-                    <td class="btn num">7</td>
-                    <td class="btn num">8</td>
-                    <td class="btn num">9</td>
-                    <td class="btn func">-</td>
-                </tr>
-                <tr class="key_row">
-                    <td class="btn num">4</td>
-                    <td class="btn num">5</td>
-                    <td class="btn num">6</td>
-                    <td class="btn func">+</td>
-                </tr>
-                <tr class="key_row">
-                    <td class="btn num">1</td>
-                    <td class="btn num">2</td>
-                    <td class="btn num">3</td>
-                    <td class="btn equal" rowspan="2">=</td>
-                </tr>
-                <tr class="key_row">
-                    <td class="btn num">00</td>
-                    <td class="btn num">0</td>
-                    <td class="btn num">.</td>
-                </tr>
-            </table>
+            <div id="keys">
+
+                <!-- ROW 1 -->
+                <button class="btn del">AC</button>
+                <button class="btn func">x</button>
+                <button class="btn func">÷</button>
+                <button class="btn del"><img class="del" src="images/backspace_black.png" id="dlt-black" alt="delete"><img class="del" src="images/backspace_white.png" alt="delete" id="dlt-white"></button>
+               
+                <!-- ROW 2 -->
+                <button class="btn num">7</button>
+                <button class="btn num">8</button>
+                <button class="btn num">9</button>
+                <button class="btn func">-</button>
+              
+                <!-- ROW 3 -->                
+                <button class="btn num">4</button>
+                <button class="btn num">5</button>
+                <button class="btn num">6</button>
+                <button class="btn func">+</button>
+             
+                <!-- ROW 4 -->
+                <button class="btn num">1</button>
+                <button class="btn num">2</button>
+                <button class="btn num">3</button>
+                <button class="btn equal">=</button>
+              
+                <!-- ROW 5 -->
+                <button class="btn num">00</button>
+                <button class="btn num">0</button>
+                <button class="btn num">.</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
